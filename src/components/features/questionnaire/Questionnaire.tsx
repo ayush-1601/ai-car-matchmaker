@@ -19,9 +19,7 @@ const formSchema = z.object({
   fuelPreference: z.string().min(1, "Please select fuel preference"),
   transmission: z.string().min(1, "Please select transmission"),
   usageType: z.string().min(1, "Please select usage type"),
-  primaryPriority: z.enum(["Mileage", "Safety", "Performance", "Features", "Low Maintenance"], {
-    required_error: "Please select a primary priority",
-  }),
+  primaryPriority: z.enum(["Mileage", "Safety", "Performance", "Features", "Low Maintenance"]),
 });
 
 interface QuestionnaireProps {
